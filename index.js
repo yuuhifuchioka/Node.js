@@ -8,10 +8,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => res.render('pages/index'));
+
 app.get('/g/', (req, res) => {
           const getStr = "こんにちはGetさん。";
           res.json({method: getStr});
           }
-       ); // 追加
-app.post('/p/', (req, res) => res.json({method: "こんにちは、postさん"})); // 追加
+       ); // GET追加
+
+app.post('/p/', (req, res) => {
+          const postStr = "こんにちはPostさん。";
+          res.json({method: postStr});
+          }
+       ); // POST追加
+
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
