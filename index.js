@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => res.render('pages/index'));
 app.get('/g/', (req, res) => {
           const getStr = "Hello Get.";
-          const getJson = {method: getStr};
+          const getJson = "{method:" + getStr + "}";
           res.json(getJson);
        ); // 追加
 app.post('/p/', (req, res) => res.json({method: "こんにちは、postさん"})); // 追加
