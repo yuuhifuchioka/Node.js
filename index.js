@@ -16,7 +16,7 @@ app.get('/g/', (req, res) => {
        ); // GET追加
 
 app.post('/p/', (req, res) => {
-          const postStr = "こんにちはPostさん。";
+          const postStr = "こんにちは" + req.body;
           res.json({method: postStr});
           }
        ); // POST追加
