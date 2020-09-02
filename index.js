@@ -11,7 +11,7 @@ app.get('/', (req, res) => res.render('pages/index'));
 app.get('/g/', (req, res) => {
           const getStr = "Hello Get.";
           const getJson = "{method:" + getStr + "}";
-          res.json(getJson);
+          res.json({method: "Hello Get."});
        ); // 追加
 app.post('/p/', (req, res) => res.json({method: "こんにちは、postさん"})); // 追加
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
