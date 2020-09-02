@@ -9,8 +9,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => res.render('pages/index'));
 app.get('/g/', (req, res) => {
-          const getStr = "Hello Get.";
-          const getJson = "{method:" + getStr + "}";
+          const getStr = "こんにちはGetさん。";
           res.json({method: getStr});
           }
        ); // 追加
